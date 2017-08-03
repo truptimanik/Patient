@@ -34,11 +34,11 @@ public class Patient extends AppCompatActivity  {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
-    String[]titles = {"History", "Pill", "Report", "Chat"};
+  // String[]titles = {"History", "Pill", "Report", "Chat"};
     private CharSequence mTitle;
     private CharSequence mDrawerTitle;
     private ActionBarDrawerToggle mDrawerToggle;
-    private Toolbar topToolBar;
+  //  private Toolbar topToolBar;
     private DatabaseReference databaseReference;
     private FirebaseAuth firebaseAuth;
     FirebaseAuth auth;
@@ -81,7 +81,7 @@ String user;
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
 
-
+/*
         List<ItemObject> listViewItems = new ArrayList<ItemObject>();
         listViewItems.add(new ItemObject("History", R.drawable.imageone));
         listViewItems.add(new ItemObject("Pill", R.drawable.imagetwo));
@@ -90,7 +90,7 @@ String user;
 
         mDrawerList.setAdapter(new CustomAdapter(this, listViewItems));
 
-
+*/
 
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 
@@ -258,7 +258,7 @@ String user;
         fragmentManager.beginTransaction().replace(R.id.main_fragment_container, fragment).commit();
 
         mDrawerList.setItemChecked(position, true);
-        setTitle(titles[position]);
+      //  setTitle(titles[position]);
         mDrawerLayout.closeDrawer(mDrawerList);
     }
 
